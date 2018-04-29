@@ -6,6 +6,7 @@ module SPOT
       attr_reader :type
       attr_reader :latitude
       attr_reader :longitude
+      attr_reader :altitude
       attr_reader :battery_state
       attr_reader :hidden
       attr_reader :show_custom_message
@@ -22,6 +23,7 @@ module SPOT
         @type = object.fetch('messageType')
         @latitude = object.fetch('latitude')
         @longitude = object.fetch('longitude')
+        @altitude = object.fetch('altitude')
         @battery_state = object.fetch('batteryState')
         @hidden = object.fetch('hidden') == 1
         @show_custom_message = object.fetch('showCustomMsg') == "Y"
